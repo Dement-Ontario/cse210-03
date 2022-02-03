@@ -1,0 +1,95 @@
+(Object) Director
+
+    Responsibility:
+        Control the game play
+
+    Behaviors:
+        Set up the initial conditions of the game
+        Ask for user input
+        Update word and parachute status
+        Display word and parachute status
+        Update the state of the game
+
+    State:
+        Is playing
+        Word status
+        Parachute status
+
+(Class) Director
+
+    Attributes:
+        _is_playing (boolean)
+        _word_status (string)
+        _parachute_status (string)
+
+    Methods:
+        start_game
+        _get_inputs
+        _do_updates
+        _do_outputs
+        _get_game_state
+
+(Object) Word
+
+    Responsibility:
+        Choose a random word from a list and keep track of correct guesses
+
+    Behaviors:
+        Pick random word from a list of words
+        Split word into letters
+        Create as many blank spaces as there are letters
+        Check if player's guess matches chosen word
+        Change blank space into letter if choice is correct
+
+    State:
+        Chosen word
+        Blank spaces
+
+(Class) Word
+
+    Attributes:
+        _chosen_word
+        _blanks
+        
+    Methods:
+        pick_word
+        split_word
+        create_blanks
+        verify_guess
+        update_blanks
+
+(Object) Parachute
+
+    Responsibility:
+        Keep track of how many tries the player has left
+
+    Behaviors:
+        Create a full parachute
+        If player guess is wrong, remove a line from the parachute
+
+    State:
+        Parachute status
+
+(Class) Parachute
+
+    Attributes:
+        _parachute_status
+        
+    Methods:
+        create_parachute
+        update_parachute
+
+(Object) Terminal Service
+
+    Responsibility:
+        Provide input and output operations for the terminal
+
+    Behaviors:
+        Get text input
+        Display text
+
+(Class) Terminal Service
+        
+    Methods:
+        read_text
+        write_text
