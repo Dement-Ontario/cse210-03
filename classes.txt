@@ -73,11 +73,16 @@
 (Class) Parachute
 
     Attributes:
+        _parachute
         _parachute_status
         
     Methods:
-        create_parachute
+        _push
+        _pop
         update_parachute
+        _update_parachute_status
+        display_parachute
+        
 
 (Object) Terminal Service
 
