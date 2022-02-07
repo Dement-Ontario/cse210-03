@@ -1,5 +1,5 @@
 from game.parachute import Parachute
-# from game.terminal import Terminal
+from game.terminal_service import TerminalService
 from game.word import Word
 
 
@@ -18,6 +18,7 @@ class Director:
         Args:
             self (Director): an instance of Director.
         """
+        self._terminal_service = TerminalService()
 
         self._is_playing = True
 
@@ -56,15 +57,15 @@ class Director:
             is_valid = False
 
             while not is_valid:
-                user_input = input("Guess a letter [a-z]: ")
+                user_input = self._terminal_service.read_text("Guess a letter [a-z]: ")
 
                 if len(user_input) == 1 and user_input != " ":
                     if user_input >= "a" and user_input <= "z":
                         is_valid = True
                     else:
-                        print("Please, enter a letter from a through z.")
+                        self._terminal_service.write_text("Please, enter a letter from a through z.")
                 else:
-                    print("Please, enter a letter from a through z.")
+                    self._terminal_service.write_text("Please, enter a letter from a through z.")
 
             self._guess = user_input
 
