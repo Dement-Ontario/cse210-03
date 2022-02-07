@@ -1,7 +1,7 @@
 import json
 import random
 
-FILE_PATH = "cse210-03/words.json"
+FILE_PATH = "words.json"
 
 
 class Word:
@@ -100,7 +100,7 @@ class Word:
 
         is_repeat = False
         for letter in self._blanks:
-            if letter == guess:
+            if letter.upper() == guess.upper():
                 is_repeat = True
                 break
 
