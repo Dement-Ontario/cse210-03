@@ -60,7 +60,7 @@ class Director:
                 user_input = self._terminal_service.read_text("Guess a letter [a-z]: ")
 
                 if len(user_input) == 1 and user_input != " ":
-                    if user_input >= "a" and user_input <= "z":
+                    if user_input.upper() >= "A" and user_input.upper() <= "Z":
                         is_valid = True
                     else:
                         self._terminal_service.write_text_endl("Please, enter a letter from a through z.")
