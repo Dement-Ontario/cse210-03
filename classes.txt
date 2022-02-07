@@ -48,15 +48,19 @@
 (Class) Word
 
     Attributes:
-        _chosen_word
+        _word_list
+        chosen_word
+        _letters
         _blanks
+        blank_number
         
     Methods:
-        pick_word
-        split_word
-        create_blanks
+        _get_word_list
+        _pick_word
+        _split_word
+        _create_blanks
         verify_guess
-        update_blanks
+        display_blanks
 
 (Object) Parachute
 
