@@ -6,7 +6,7 @@ class Parachute:
 
     Attributes:
         _parachute (list): list of elements in the parachute.
-        _parachute_status (int): number of elements in the parachute.
+        parachute_status (int): number of elements in the parachute.
     """
 
     def __init__(self):
@@ -27,7 +27,7 @@ class Parachute:
         self._push(" /___\\")
         self._push("  ___")
 
-        self._parachute_status = 0
+        self.parachute_status = 0
         self._update_parachute_status()
 
     def _push(self, item):
@@ -46,7 +46,7 @@ class Parachute:
             self (Parachute): An instance of Parachute.
         """
 
-        if (self._parachute_status <= 0):
+        if (self.parachute_status <= 0):
             return False
         return self._parachute.pop()
 
@@ -58,12 +58,12 @@ class Parachute:
             self (Parachute): An instance of Parachute.
         """
 
-        if self._parachute_status > 1:
+        if self.parachute_status > 1:
             self._pop()
             self._update_parachute_status()
             return True
 
-        elif self._parachute_status == 1:
+        elif self.parachute_status == 1:
             self._pop()
             self._pop()
             self._push("   X")
@@ -80,7 +80,7 @@ class Parachute:
             self (Parachute): An instance of Parachute.
         """
 
-        self._parachute_status = len(self._parachute) - 5
+        self.parachute_status = len(self._parachute) - 5
 
     def display_parachute(self):
         """Display parachute in a user friendly format.
@@ -88,6 +88,7 @@ class Parachute:
         Args:
             self (Parachute): An instance of Parachute.
         """
-
-        for element in range(self._parachute_status + 4, -1, -1):
+        
+        print()
+        for element in range(self.parachute_status + 4, -1, -1):
             print(self._parachute[element])

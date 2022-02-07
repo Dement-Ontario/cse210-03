@@ -104,11 +104,17 @@ class Word:
                 is_repeat = True
                 break
 
+        starting_number = self.blank_number
+
         if not is_repeat:
             for index in range(len(self._letters)):
                 if self._letters[index].upper() == guess.upper():
                     self._blanks[index] = self._letters[index]
                     self.blank_number -= 1
+
+        if starting_number != self.blank_number:
+            return True
+        return False
 
     def display_blanks(self):
         """Display blanks in a user friendly format.

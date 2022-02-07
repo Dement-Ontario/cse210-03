@@ -18,16 +18,21 @@
 (Class) Director
 
     Attributes:
-        _is_playing (boolean)
-        _word_status (string)
-        _parachute_status (string)
+        self._is_playing (boolean)
+
+        self._word (Object)
+        self._word_status (int)
+
+        self._parachute (Object)
+        self._parachute_status (int)
+
+        self._guess (string)
 
     Methods:
         start_game
         _get_inputs
         _do_updates
         _do_outputs
-        _get_game_state
 
 (Object) Word
 
@@ -78,7 +83,7 @@
 
     Attributes:
         _parachute
-        _parachute_status
+        parachute_status
         
     Methods:
         _push
