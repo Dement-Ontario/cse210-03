@@ -100,11 +100,5 @@ class Director:
         Args:
             self (Director): An instance of Director.
         """
-
-        if self._is_playing:
-
-            self._word.display_blanks()
-            self._parachute.display_parachute()
-        
-        else:
-            self._parachute.display_parachute()
+        self._word.display_blanks()
+        self._parachute.display_parachute()
