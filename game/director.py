@@ -59,7 +59,10 @@ class Director:
                 user_input = input("Guess a letter [a-z]: ")
 
                 if len(user_input) == 1 and user_input != " ":
-                    is_valid = True
+                    if user_input >= "a" and user_input <= "z":
+                        is_valid = True
+                    else:
+                        print("Please, enter a letter from a through z.")
                 else:
                     print("Please, enter a letter from a through z.")
 
