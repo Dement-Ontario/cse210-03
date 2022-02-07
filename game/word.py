@@ -1,6 +1,8 @@
 import json
 import random
 
+from game.terminal_service import Terminal_Service
+
 FILE_PATH = "words.json"
 
 
@@ -24,6 +26,8 @@ class Word:
         Args:
             self (Word): an instance of Word.
         """
+        self._terminal_service = Terminal_Service()
+
         self._word_list = []
         self._get_word_list()
 
@@ -124,6 +128,8 @@ class Word:
         """
 
         for index in range(len(self._blanks)):
-            print(self._blanks[index], end=" ")
+            self._terminal_service.write_text(self._blanks[index])
 
-        print()
+        self._terminal_service.write_text_endl("")
+
+        

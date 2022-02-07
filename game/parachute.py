@@ -1,3 +1,5 @@
+from game.terminal_service import Terminal_Service
+
 class Parachute:
     """The parachute to be used in the game.
 
@@ -15,6 +17,7 @@ class Parachute:
         Args:
             self (Parachute): an instance of Parachute.
         """
+        self._terminal_service = Terminal_Service()
 
         self._parachute = []
         self._push("^^^^^^^")
@@ -88,7 +91,8 @@ class Parachute:
         Args:
             self (Parachute): An instance of Parachute.
         """
-        
-        print()
+
+        self._terminal_service.write_text_endl("")
+
         for element in range(self.parachute_status + 4, -1, -1):
-            print(self._parachute[element])
+            self._terminal_service.write_text_endl(self._parachute[element])
