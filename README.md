@@ -31,6 +31,10 @@ root                    (project root folder)
 ## Authors
 ---
 * Joseph Toronto (tor21019@byui.edu)
+Coded Terminal Service class, modified Director class to put
+Terminal Service to use, made blank letters display
+regardless of the game's status
+
 * Eddy Sosa Lora (eddysosa@byui.edu)
 * Stephen Port (por21022@byui.edu)
 * Atubo Gift Atubo (atu21001@byui.edu)
