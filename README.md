@@ -31,7 +31,7 @@ root                    (project root folder)
 ## Authors
 ---
 * Joseph Toronto (tor21019@byui.edu)
-Coded Terminal Service class, modified Director class to put
+  * Coded Terminal Service class, modified Director class to put
 Terminal Service to use, made blank letters display
 regardless of the game's status
 
