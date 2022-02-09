@@ -36,6 +36,8 @@ Terminal Service to use, made blank letters display
 regardless of the game's status
 
 * Eddy Sosa Lora (eddysosa@byui.edu)
+  * Coded Director, Parachute and Word classes based on the design done by Joseph and Stephen. Fixed bug with uppercase and lowercase letters.
+
 * Stephen Port (por21022@byui.edu)
 * Atubo Gift Atubo (atu21001@byui.edu)
 * Mark Jovit R. Colonia (markcolonia12@gmail.com)
