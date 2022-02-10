@@ -70,7 +70,7 @@ class Director:
             self._guess = user_input
 
     def do_updates(self):
-        """Updates the status of word, parachute and game.
+        """Updates the status of word, parachute, guesses and game.
 
         Args:
             self (Director): An instance of Director.
@@ -82,18 +82,28 @@ class Director:
 
             if is_right_guess:
                 self._word_status = self._word.blank_number
+                print(f"Correct Guess!")
 
                 # If the puzzle is solved the game is over.
                 if self._word_status == 0:
                     self._is_playing = False
+                    print("Congrats you solved the puzzle!")
 
             else:
                 self._parachute.update_parachute()
                 self._parachute_status = self._parachute.parachute_status
 
+                if self._parachute_status == 3:
+                    print(f"Wrong Guess! \nYou have 3 guesses left")
+                elif self._parachute_status == 2:
+                    print(f"Wrong Guess! \nYou have 2 guesses left")
+                elif self._parachute_status == 1:
+                    print(f"Wrong Guess! \nYou have 1 guess left")
+
                 # If the player has no more parachute the game is over.
-                if self._parachute_status == 0:
+                elif self._parachute_status == 0:
                     self._is_playing = False
+                    print("Game Over!")
 
     def do_outputs(self):
         """

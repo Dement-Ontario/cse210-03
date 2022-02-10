@@ -6,14 +6,15 @@
     Behaviors:
         Set up the initial conditions of the game
         Ask for user input
-        Update word and parachute status
-        Display word and parachute status
+        Update word, parachute and guess status
+        Display word, parachute and guess status
         Update the state of the game
 
     State:
         Is playing
         Word status
         Parachute status
+        Game status
 
 (Class) Director
 

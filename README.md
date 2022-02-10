@@ -39,5 +39,6 @@ regardless of the game's status
   * Coded Director, Parachute and Word classes based on the design done by Joseph and Stephen. Fixed bug with uppercase and lowercase letters.
 
 * Stephen Port (por21022@byui.edu)
+  * Added code to tell the user exactly many guesses they have in the terminal output, along with game is over or puzzle is solved.
 * Atubo Gift Atubo (atu21001@byui.edu)
 * Mark Jovit R. Colonia (markcolonia12@gmail.com)
